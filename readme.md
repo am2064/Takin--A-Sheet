@@ -9,6 +9,9 @@ What is this?
 As it is currently, this is a read-only api that provides support for listing
 users, their characters, character's general info, and item info.
 
+The API 
+--------
+
 ###users###
 
 ####all####
