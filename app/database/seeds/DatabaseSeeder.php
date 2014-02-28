@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder {
 		$this->call('StatsTableSeeder');
 		$this->call('SkillsTableSeeder');
 		$this->call('AbilitiesTableSeeder');
+		$this->call('BonusesTableSeeder');
+		$this->call('WeaponsTableSeeder');
+		$this->call('ArmorsTableSeeder');
+		$this->call('SpellsTableSeeder');
 	}
 
 }

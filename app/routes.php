@@ -31,3 +31,12 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function(){
 
 	Route::resource('users', 'UsersController');
 });
+
+
+Route::resource('bonuses', 'BonusesController');
+
+Route::resource('weapons', 'WeaponsController');
+
+Route::resource('armors', 'ArmorsController');
+
+Route::resource('spells', 'SpellsController');
