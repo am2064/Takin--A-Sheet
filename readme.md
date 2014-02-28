@@ -1,21 +1,84 @@
-## Laravel PHP Framework
+Takin A Sheet
+=============
 
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)](https://packagist.org/packages/laravel/framework) [![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.png)](https://packagist.org/packages/laravel/framework) [![Build Status](https://travis-ci.org/laravel/framework.png)](https://travis-ci.org/laravel/framework)
+An API for Roleplayers
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, and caching.
+What is this?
+-------------
 
-Laravel aims to make the development process a pleasing one for the developer without sacrificing application functionality. Happy developers make the best code. To this end, we've attempted to combine the very best of what we have seen in other web frameworks, including frameworks implemented in other languages, such as Ruby on Rails, ASP.NET MVC, and Sinatra.
+As it is currently, this is a read-only api that provides support for listing
+users, their characters, character's general info, and item info.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+###users###
 
-## Official Documentation
+####all####
 
-Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
+This provides you a list of all the users on the system. Use it sparingly.
 
-### Contributing To Laravel
+attribute    | value     | description                | possible values                       | example value
+----------   | -------   | -------------              | -----------------                     | --------------
+`id`         | `integer` | User ID Number             | 1-9999999999999                       | 9001
+`name`       | `string`  | User Name                  | text                                  | Earl
+`created_at` | `string`  | Creation Date and Time     | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
+`updated_at` | `string`  | Last updated Date and Time | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
 
-**All issues and pull requests should be filed on the [laravel/framework](http://github.com/laravel/framework) repository.**
+####individual####
 
-### License
+attribute    | value     | description                           | possible values                                                             | example value
+----------   | -------   | -------------                         | -----------------                                                           | --------------
+`id`         | `integer` | User ID Number                        | 1-9999999999999                                                             | 9001
+`name`       | `string`  | User Name                             | text                                                                        | Earl
+`created_at` | `string`  | Creation Date and Time                | text in format of YYYY-MM-DD HH:MM:SS                                       | 2014-02-27 09:33:37
+`updated_at` | `string`  | Last updated Date and Time            | text in format of YYYY-MM-DD HH:MM:SS                                       | 2014-02-27 09:33:37
+`characters` | `array`   | An array of all the user's characters | Objects with character name, owner_id, game_id, description, and timestamps | JSON Object
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+
+###characters###
+
+####all####
+
+This is the same character object that is returned to a user list.
+Use this sparingly as well.
+
+attribute    | value     | description                | possible values                       | example value
+----------   | -------   | -------------              | -----------------                     | --------------
+`id`         | `integer` | Character ID Number        | 1-9999999999999                       | 9001
+`name`       | `string`  | Character Name             | text                                  | Earl
+`owner_id`   | `integer` | Owner ID Number            | 1-9999999999999                       | 903
+`game_id`    | `integer` | Game ID Number             | 1-9999999999999                       | 904
+`created_at` | `string`  | Creation Date and Time     | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
+`updated_at` | `string`  | Last updated Date and Time | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
+
+####individual####
+
+attribute    | value     | description                                   | possible values                                                                  | example value
+----------   | -------   | -------------                                 | -----------------                                                                | --------------
+`id`         | `integer` | Character ID Number                           | 1-9999999999999                                                                  | 9001
+`name`       | `string`  | Character Name                                | text                                                                             | Earl
+`owner_id`   | `integer` | Owner ID Number                               | 1-9999999999999                                                                  | 903
+`game_id`    | `integer` | Game ID Number                                | 1-9999999999999                                                                  | 904
+`stats`      | `array`   | An array of all the character's stats         | Objects with character name, owner_id, game_id, description, and timestamps      | JSON Object
+`skills`     | `array`   | An array of all the character's skills        | Objects with skill name, character_id, score, bonus, and timestamps              | JSON Object
+`inventory`  | `array`   | An array of all the character's inventory     | Objects with item name, character_id, amount, bonus, description, and timestamps | JSON Object
+`abilities`  | `array`   | An array of all the character's abilities     | Objects with ability name, character_id, description, and timestamps             | JSON Object
+`game`       | `array`   | An array of the character's game information  | Object with game's name, description, and timestamps                             | JSON Object
+`owner`      | `array`   | An array of the character's owner information | Object with owner's name and timestamps                                          | JSON Object
+`created_at` | `string`  | Creation Date and Time                        | text in format of YYYY-MM-DD HH:MM:SS                                            | 2014-02-27 09:33:37
+`updated_at` | `string`  | Last updated Date and Time                    | text in format of YYYY-MM-DD HH:MM:SS                                            | 2014-02-27 09:33:37
+
+
+###items###
+
+Items only exist on an individual scale. There is no massive list of them available.
+
+attribute     | value     | description                                                      | possible values                       | example value
+----------    | -------   | -------------                                                    | -----------------                     | --------------
+`id`          | `integer` | Character ID Number                                              | 1-9999999999999                       | 9001
+`name`        | `string`  | Character Name                                                   | text                                  | Earl
+`owner_id`    | `integer` | Owner ID Number                                                  | 1-9999999999999                       | 903
+`amount`      | `integer` | Amount of item owned by owner                                    | 1-9999999999999                       | 50
+`bonus`       | `integer` | Item's bonus. This can be something like how much a potion heals | 1-9999999999999                       | 50
+`description` | `string`  | The item's description                                           | text                                  | Fokin Sord
+`created_at`  | `string`  | Creation Date and Time                                           | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
+`updated_at`  | `string`  | Last updated Date and Time                                       | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
