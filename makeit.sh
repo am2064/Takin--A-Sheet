@@ -1,0 +1,7 @@
+#php artisan generate:resource game --fields="name:string:unique, description:text"
+#php artisan generate:resource character --fields="name:string, owner_id:integer, game_id:integer, description:text"
+#php artisan generate:resource item --fields="name:string, owner_id:integer, amount:integer, bonus:integer, description:text"
+#php artisan generate:resource stat --fields="name:string, owner_id:integer, score:integer, bonus:integer"
+#php artisan generate:resource skill --fields="name:string, owner_id:integer, bonus:integer"
+#php artisan generate:resource ability --fields="name:string, owner_id:integer, description:text"
+php artisan generate:resource user --fields="name:string:unique, password:string"
