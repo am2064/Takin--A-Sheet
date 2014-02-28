@@ -12,9 +12,9 @@ users, their characters, character's general info, and item info.
 The API 
 --------
 
-###users###
+###/users###
 
-####all####
+####/####
 
 This provides you a list of all the users on the system. Use it sparingly.
 
@@ -25,7 +25,7 @@ attribute    | value     | description                | possible values         
 `created_at` | `string`  | Creation Date and Time     | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
 `updated_at` | `string`  | Last updated Date and Time | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
 
-####individual####
+####/{id}####
 
 attribute    | value     | description                           | possible values                                                             | example value
 ----------   | -------   | -------------                         | -----------------                                                           | --------------
@@ -37,9 +37,9 @@ attribute    | value     | description                           | possible valu
 
 
 
-###characters###
+###/characters###
 
-####all####
+####/####
 
 This is the same character object that is returned to a user list.
 Use this sparingly as well.
@@ -53,7 +53,7 @@ attribute    | value     | description                | possible values         
 `created_at` | `string`  | Creation Date and Time     | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
 `updated_at` | `string`  | Last updated Date and Time | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
 
-####individual####
+####/{id}####
 
 attribute    | value     | description                                   | possible values                                                                  | example value
 ----------   | -------   | -------------                                 | -----------------                                                                | --------------
@@ -71,7 +71,7 @@ attribute    | value     | description                                   | possi
 `updated_at` | `string`  | Last updated Date and Time                    | text in format of YYYY-MM-DD HH:MM:SS                                            | 2014-02-27 09:33:37
 
 
-###items###
+###/items/{id}###
 
 Items only exist on an individual scale. There is no massive list of them available.
 
