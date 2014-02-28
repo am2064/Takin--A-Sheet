@@ -5,8 +5,6 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "dev-master",
-		"binarix/foundation-pagination": "dev-master",
-		"stevenmaguire/zurb-foundation-laravel": "dev-master",
 		"way/generators": "dev-master",
 		"doctrine/dbal": "dev-master"
 	},
