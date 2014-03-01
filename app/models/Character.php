@@ -21,9 +21,22 @@ class Character extends Eloquent {
 		return $this->hasMany('Ability','owner_id');
 	}
 
+	public function weapons(){
+		return $this->hasMany('Weapon','owner_id');
+	}
+
+	public function armors(){
+		return $this->hasMany('Armor','owner_id');
+	}
+
+	public function spells(){
+		return $this->hasMany('Spell','owner_id');
+	}
+
 	public function game(){
 		return $this->belongsTo('Game','game_id');
 	}
+
 	public function owner(){
 		return $this->belongsTo('User','owner_id');
 	}

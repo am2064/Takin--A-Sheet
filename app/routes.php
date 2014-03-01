@@ -40,3 +40,11 @@ Route::resource('weapons', 'WeaponsController');
 Route::resource('armors', 'ArmorsController');
 
 Route::resource('spells', 'SpellsController');
+
+Route::resource('bonuses', 'BonusesController');
+
+Route::resource('weapons', 'WeaponsController');
+
+Route::resource('armors', 'ArmorsController');
+
+Route::resource('spells', 'SpellsController');
