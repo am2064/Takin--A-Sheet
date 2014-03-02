@@ -149,7 +149,7 @@ class CharactersController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($id){
 		$character = Character::where('owner_id',Auth::id)->find($id);
 		if(Input::has('name')) $character->name = Input::get('name');
 		if(Input::has('description')) $character->description = Input::get('description');
@@ -163,8 +163,6 @@ class CharactersController extends BaseController {
 			),
 			200
 		);
-{
-		//
 	}
 
 	/**
