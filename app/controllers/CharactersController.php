@@ -150,7 +150,20 @@ class CharactersController extends BaseController {
 	 * @return Response
 	 */
 	public function update($id)
-	{
+		$character = Character::where('owner_id',Auth::id)->find($id);
+		if(Input::has('name')) $character->name = Input::get('name');
+		if(Input::has('description')) $character->description = Input::get('description');
+		if(Input::has('game')) $character->game = Input::get('game');
+		$character->owner = Auth::id();
+		$character->save();
+		return Response::json(array
+			(
+				'error'=>false,
+				'message'=>'Character Updated'
+			),
+			200
+		);
+{
 		//
 	}
 
@@ -162,7 +175,16 @@ class CharactersController extends BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+		$character = Character::where('owner_id', Auth::id())->find($id);
+		$character->delete();
+		return Response::json(array
+			(
+				'error'=>false,
+				'message'=>'Character Deleted'
+			),
+			200
+		);
+
 	}
 
 }
