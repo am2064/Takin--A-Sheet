@@ -13,7 +13,6 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
 });
 
 Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function(){
@@ -30,21 +29,20 @@ Route::group(array('prefix' => 'api/v1', 'before' => 'auth.basic'), function(){
 	Route::resource('abilities', 'AbilitiesController');
 
 	Route::resource('users', 'UsersController');
+
+	Route::resource('bonuses', 'BonusesController');
+
+	Route::resource('weapons', 'WeaponsController');
+
+	Route::resource('armors', 'ArmorsController');
+
+	Route::resource('spells', 'SpellsController');
+
+	Route::resource('bonuses', 'BonusesController');
+
+	Route::resource('weapons', 'WeaponsController');
+
+	Route::resource('armors', 'ArmorsController');
+
+	Route::resource('spells', 'SpellsController');
 });
-
-
-Route::resource('bonuses', 'BonusesController');
-
-Route::resource('weapons', 'WeaponsController');
-
-Route::resource('armors', 'ArmorsController');
-
-Route::resource('spells', 'SpellsController');
-
-Route::resource('bonuses', 'BonusesController');
-
-Route::resource('weapons', 'WeaponsController');
-
-Route::resource('armors', 'ArmorsController');
-
-Route::resource('spells', 'SpellsController');
