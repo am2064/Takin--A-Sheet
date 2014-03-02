@@ -1,0 +1,3 @@
+[submodule "app/views/Gotta--Sheet"]
+	path = app/views/Gotta--Sheet
+	url = git@github.com:am2064/Gotta--Sheet.git
