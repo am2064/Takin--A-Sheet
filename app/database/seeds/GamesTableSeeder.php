@@ -9,7 +9,7 @@ class GamesTableSeeder extends Seeder {
 		DB::table('games')->truncate();
 
 		$games = array(
-			array('name'=>'Pathfinder','description'=>'Hor dor 20'),
+			array('name'=>'pathfinder','longname'=>'Pathfinder Roleplaying Game','description'=>'Hor dor 20'),
 
 		);
 

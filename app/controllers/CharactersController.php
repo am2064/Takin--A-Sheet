@@ -48,6 +48,7 @@ class CharactersController extends BaseController {
 				$skills->name = $skill['name'];
 				$skills->owner_id = $character->id;
 				$skills->bonus = $skill['bonus'];
+				$skills->stat = $skill['stat'];
 				$skills->save();
 			}
 		}    
@@ -57,6 +58,7 @@ class CharactersController extends BaseController {
 				$abilities->name = $ability['name'];
 				$abilities->owner_id = $character->id;
 				$abilities->description = $ability['description'];
+				$abilities->type = $ability['type'];
 				$abilities->save();
 			}
 		} 
