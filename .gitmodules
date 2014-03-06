@@ -1,3 +1,6 @@
+[submodule "public/--force"]
+	path = public/--force
+	url = git@github.com:am2064/Gotta--Sheet.git
 [submodule "public/Gotta--Sheet"]
 	path = public/Gotta--Sheet
 	url = git@github.com:am2064/Gotta--Sheet.git
