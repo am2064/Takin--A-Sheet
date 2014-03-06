@@ -7,3 +7,26 @@ composer.lock
 .DS_Store
 Thumbs.db
 makeit.sh
+
+# Vim
+*.swp
+*.swo
+*.un~
+Session.vim
+.netrwhist
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+.nrepl-port
+
+# Emacs Org-mode
+.org-id-locations
+*_archive
