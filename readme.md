@@ -85,3 +85,8 @@ attribute     | value     | description                                         
 `description` | `string`  | The item's description                                           | text                                  | Fokin Sord
 `created_at`  | `string`  | Creation Date and Time                                           | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
 `updated_at`  | `string`  | Last updated Date and Time                                       | text in format of YYYY-MM-DD HH:MM:SS | 2014-02-27 09:33:37
+
+Todo
+====
+
+* Add special to skills to indicate things like class skills
