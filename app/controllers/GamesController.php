@@ -9,7 +9,14 @@ class GamesController extends BaseController {
 	 */
 	public function index()
 	{
-        return View::make('games.index');
+		$games = Game::all();
+		return Response::json(array
+			(
+				'error'=>false,
+				'games'=>$games->toArray()
+			),
+			200
+		);
 	}
 
 	/**

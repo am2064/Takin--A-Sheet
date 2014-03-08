@@ -126,7 +126,15 @@ class CharactersController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$character = Character::find($id);
+		if(!$character = Character::find($id)){
+			return Response::json(array
+				(
+					'error'=>true,
+					'message'=>'Character not found'
+				),
+				404
+			);
+		}
 		$character->stats;
 		$character->skills;
 		$character->abilities;

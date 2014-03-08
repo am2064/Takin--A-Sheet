@@ -8,8 +8,6 @@ class SkillsTableSeeder extends Seeder {
 		// DB::table('skills')->truncate();
 
 		$skills = array(
-			array('name'=>'Fuck','owner_id'=>'1','bonus'=>'3')
-
 		);
 
 		// Uncomment the below to run the seeder

@@ -8,8 +8,6 @@ class StatsTableSeeder extends Seeder {
 		// DB::table('stats')->truncate();
 
 		$stats = array(
-			array('name'=>'Stronk','owner_id'=>'1','score'=>'10','bonus'=>'0'),
-
 		);
 
 		// Uncomment the below to run the seeder
